@@ -3,7 +3,9 @@ source "https://rubygems.org"
 ruby "3.1.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.2"
+gem "rails", "~> 7.1.1"
+gem 'psych', '4.0.0'
+gem 'activerecord', '7.1.1'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
