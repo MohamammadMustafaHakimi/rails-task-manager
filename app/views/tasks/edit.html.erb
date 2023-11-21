@@ -1,9 +1,3 @@
 <h1>This is the edit page for (<%= @task.title %>)</h1>
+<%= render "form", task: @task %>
 
-<%= form_with model: @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>

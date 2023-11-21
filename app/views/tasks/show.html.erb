@@ -1,7 +1,28 @@
 <h1>This should find the tasks</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Details</th>
+      <th scope="col">Completed?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><%= @task.id %></th>
+      <td><%= @task.title %></td>
+      <td><%= @task.details %></td>
+      <td><%= @task.completed ? "completed" : "not completed"%></td>
+  </tbody>
+</table>
 
-<h1><%= @task.title %></h1>
-<h2><%= @task.details %></h2>
 
 
-<%= link_to "Delete", tasks_path %>
+<div>
+
+</div>
+
+<%= link_to "Delete", @task, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%= link_to "Edit Task", edit_task_path(@task) %>
+<%= link_to "All Tasks", tasks_path %>

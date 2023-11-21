@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+require "faker"
+Task.destroy_all
+puts "cleaning the databas..."
+3.times do
+  tasks = Task.new(title: Faker::Hobby.activity, details: ["do at 7", "do at 14", "do at 15"].sample, completed: [true, false].sample)
+  tasks.save
+end
+puts "new fake tasks created"

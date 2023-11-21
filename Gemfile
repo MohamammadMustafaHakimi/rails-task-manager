@@ -6,6 +6,8 @@ ruby "3.1.2"
 gem "rails", "~> 7.1.1"
 gem 'psych', '4.0.0'
 gem 'activerecord', '7.1.1'
+gem 'faker'
+gem 'bootstrap', '~> 5.1.3'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -20,7 +22,7 @@ gem "puma", ">= 5.0"
 gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
+gem "turbo-rails", "~> 1.0"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
